@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Verify</title>
+</head>
+<body>
+<h1>Verify</h1>
+<form action="#" th:action="@{/verify}" method="post">
+    <input type="hidden" name="email" th:value="${email}">
+    <div>
+        <label for="passphrase">Passphrase:</label>
+        <input type="text" id="passphrase" name="passphrase">
+    </div>
+    <div>
+        <button type="submit">Verify</button>
+    </div>
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+</form>
+</body>
+</html>
