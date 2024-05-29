@@ -11,14 +11,20 @@ public class Restaurant {
     private String name;
     private String address;
     private Location location;
+    private String pincode;
+    private String place;
+    private Double rating; // Changed from double to Double
 
     // Constructors
     public Restaurant() {}
 
-    public Restaurant(String name, String address, Location location) {
+    public Restaurant(String name, String address, Location location, String pincode, String place, Double rating) {
         this.name = name;
         this.address = address;
         this.location = location;
+        this.pincode = pincode;
+        this.place = place;
+        this.rating = rating;
     }
 
     // Getters and Setters
@@ -54,32 +60,57 @@ public class Restaurant {
         this.location = location;
     }
 
+    public String getPincode() {
+        return pincode;
+    }
+
+    public void setPincode(String pincode) {
+        this.pincode = pincode;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public Double getRating() { // Changed from double to Double
+        return rating;
+    }
+
+    public void setRating(Double rating) { // Changed from double to Double
+        this.rating = rating;
+    }
+
+    // Nested Location Class
     public static class Location {
-        private double latitude;
-        private double longitude;
+        private Double latitude; // Changed from double to Double
+        private Double longitude; // Changed from double to Double
 
         // Constructors
         public Location() {}
 
-        public Location(double latitude, double longitude) {
+        public Location(Double latitude, Double longitude) {
             this.latitude = latitude;
             this.longitude = longitude;
         }
 
         // Getters and Setters
-        public double getLatitude() {
+        public Double getLatitude() {
             return latitude;
         }
 
-        public void setLatitude(double latitude) {
+        public void setLatitude(Double latitude) {
             this.latitude = latitude;
         }
 
-        public double getLongitude() {
+        public Double getLongitude() {
             return longitude;
         }
 
-        public void setLongitude(double longitude) {
+        public void setLongitude(Double longitude) {
             this.longitude = longitude;
         }
     }
