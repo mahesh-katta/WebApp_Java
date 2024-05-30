@@ -20,6 +20,9 @@
     <div th:if="${error}">
         <p th:text="${error}"></p>
     </div>
+    <div th:if="${showForgotLink}">
+        <a th:href="@{/forgot}">Forgot Password/Username?</a>
+    </div>
 </form>
 </body>
 </html>
